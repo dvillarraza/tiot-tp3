@@ -32,6 +32,11 @@ When('borro la clave {string}', function (clave) {
     expect(contexto.lista.delete(clave)).to.be.true;
 });
 
+//Se borra un elemento que no esta en la lista
+//Se utiliza un parametro del tipo string para el nombre de la clave 
+Then('si borro la clave {string} no esta en la lista', function (clave) {
+    expect(contexto.lista.delete(clave)).to.be.false;
+});
 
 //Se utiliza un parametro del tipo int para la cantidad de elementos de la lista
 Then('la lista tiene {int} elemento(s) almacenado(s)', function (cantidad) {

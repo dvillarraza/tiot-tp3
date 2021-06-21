@@ -8,7 +8,7 @@
     "coverage": "nyc --reporter=html cucumber-js --publish-quiet"
   },
   "nyc": {
-    "exclude": "features/**" 
+    "exclude": "features/**"
   },
   "author": "Diego Villarraza",
   "license": "ISC",

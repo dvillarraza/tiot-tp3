@@ -18,7 +18,7 @@ Escenario: Agregar un elemento a una lista que ya esta en la lista
     Dado una lista con los siguientes elementos
     |  clave  |  valor  |
     Cuando agrego la clave "clave" con el valor "actualizado"
-    Y si busco la clave "clave" obtengo el valor "actualizado"    
+    Entonces si busco la clave "clave" obtengo el valor "actualizado"    
 
 Escenario: Verificar la cantidad de elementos de una lista 
     Dado una lista con los siguientes elementos
@@ -32,13 +32,14 @@ Escenario: Agrego un elemento a una lista de elementos
     |  claveA  |   12  |
     |  claveZ  |   7   |
     |  claveB  |   8   |
-    Cuando agrego la clave "claveC" con el valor 8   
-    Entonces la lista tiene 4 elementos almacenados
-    Y el resultado es la siguiente lista ordenada  
+    Cuando agrego la clave "claveC" con el valor 8       
+    Y si busco la clave "claveC" obtengo el valor 8 
+    Entonces el resultado es la siguiente lista ordenada 
     |  claveA  |
     |  claveB  |
     |  claveC  |
-    |  claveZ  |
+    |  claveZ  |  
+    Y la lista tiene 4 elementos almacenados
 
 Escenario: Se borra un elemento de una lista de elementos 
     Dado una lista con los siguientes elementos
@@ -47,4 +48,17 @@ Escenario: Se borra un elemento de una lista de elementos
     | claveB  |   8   |
     Cuando borro la clave "claveA"
     Entonces si busco la clave "claveA" no existe
- 
+
+Escenario: Se busca un elemento que no esta en la lista de elementos 
+    Dado una lista con los siguientes elementos
+    | claveA  |   12  |
+    | claveZ  |   7   |
+    | claveB  |   8   |
+    Entonces si busco la clave "claveC" no obtengo ningun valor
+
+Escenario: Se borro un elemento que no esta en la lista de elementos 
+    Dado una lista con los siguientes elementos
+    | claveA  |   12  |
+    | claveZ  |   7   |
+    | claveB  |   8   |
+    Entonces si borro la clave "claveC" no esta en la lista
